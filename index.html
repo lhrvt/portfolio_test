@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage de Modèle 3D avec Babylon.js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="mobile-toggle">Afficher l'en-tête</button>
+    <header>
+       
+        <h1>Exemple de Page avec Babylon.js</h1>
+        
+    </header>
+    
+    <main>
+        <section class="banner-section">
+            <video autoplay loop muted>
+                <source src="medium.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        </section>
+        <section>
+            <h2>Babylon.js Scene 1</h2>
+            <div class="babylon-container">
+                <canvas id="renderCanvas1"></canvas>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Pied de page avec des informations supplémentaires.</p>
+    </footer>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="app.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
