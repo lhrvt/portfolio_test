@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="mobile-toggle">Afficher l'en-tête</button>
+    <button class="mobile-toggle"><img src="al.png" alt="Mobile Toggle"></button>
     <header>
-       
-        <h1>Exemple de Page avec Babylon.js</h1>
-        
+        <nav>
+            <button onclick="window.location.href = 'page1.html';">Page 1</button>
+            <button onclick="window.location.href = 'page2.html';">Page 2</button>
+            <button onclick="window.location.href = 'page3.html';">Page 3</button>
+        </nav>
     </header>
     
     <main>
@@ -21,12 +23,70 @@
                 Votre navigateur ne supporte pas la balise vidéo.
             </video>
         </section>
-        <section>
-            <h2>Babylon.js Scene 1</h2>
+        <section class="render-section">
+            <div class="content">
+                <h2>RENDER</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus et 
+                    ultrices posuere cubilia Curae.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                </p>
+                <button>Voir plus</button>
+            </div>
+            <div class="media">
+                <img src="media.gif" alt="Example GIF">
+            </div>
+        </section>
+        <section class="freddy-section">
+            <div class="media">
+                <img src="media.gif" alt="Example GIF">
+            </div>
+            <div class="content">
+                <h2>FREDDY</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus et 
+                    ultrices posuere cubilia Curae.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                </p>
+                <button>Voir plus</button>
+            </div>
+        </section>
+        <section class="ecran-section">
+            <div class="media">
+                <img src="media.gif" alt="Example GIF">
+            </div>
+            <div class="content">
+                <h2>ECRAN NOIR</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus et 
+                    ultrices posuere cubilia Curae.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                </p>
+                <button>Voir plus</button>
+            </div>
+        </section>
+        <section class="argo-section">
+            <div class="media">
+                <img src="media.gif" alt="Example GIF">
+            </div>
+            <div class="content">
+                <h2>ARGO</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                    Vestibulum ante ipsum primis in faucibus orci luctus et 
+                    ultrices posuere cubilia Curae.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo et nisi consequat accumsan. Vivamus quis nunc nec enim accumsan mollis. 
+                </p>
+                <button>Voir plus</button>
+            </div>
+        </section>
+
+
+        <!-- <section>
+            <h2>babylon</h2>
             <div class="babylon-container">
                 <canvas id="renderCanvas1"></canvas>
             </div>
-        </section>
+        </section> -->
     </main>
     <footer>
         <p>Pied de page avec des informations supplémentaires.</p>

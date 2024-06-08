@@ -1,23 +1,150 @@
+:root {
+    --color-1: #ffecd1; /* Première couleur */
+    --color-2: #15616d; /* Deuxième couleur */
+    --button: #ff7d00;
+}
+
+@font-face {
+    font-family: 'MyCustomFont'; /* Specify the font family name */
+    src: url('Tiny5-Regular.ttf') format('woff2'); /* Specify the URL of the font file */
+    /* You can include additional font properties like font-weight, font-style, etc. if needed */
+}
+
+body {
+    font-family: 'MyCustomFont', sans-serif; /* Use the custom font in your CSS */
+}
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     position: relative;
-    background-color: #FCF6F3;
+    background-color: #15616d;
     color: #ffffff;
 }
 
 header, footer {
-    background-color: #043775;
-    color: #12769E;
+    background-color: #15616d;
+    color: #ffecd1;
 }
 
+.render-section {
+    font-family: 'MyCustomFont', sans-serif;
+    display: flex;
+    align-items: left;
+    text-align: justify;
+    padding: 10%;
+    background-color: var(--color-2);
+    color: #ffffff;
+}
+.freddy-section {
+    font-family: 'MyCustomFont', sans-serif;
+    display: flex; /* Utiliser flexbox */
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    padding: 10%;
+    text-align: justify;
+    background-color: var(--color-1);
+    color: #001524;
+}
+.argo-section {
+    font-family: 'MyCustomFont', sans-serif;
+    display: flex; /* Utiliser flexbox */
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    padding: 10%;
+    text-align: justify;
+    background-color: var(--color-1);;
+    color: #001524;
+}
+.ecran-section {
+    font-family: 'MyCustomFont', sans-serif;
+    display: flex; /* Utiliser flexbox */
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    padding:10%;
+    text-align: justify;
+    background-color: var(--color-2);
+    color: #ffffff;
+}
+/* Aligner les sections alternées */
+.render-section:nth-child(even) .content {
+    order: 2; /* Mettre le contenu à droite pour les sections paires */
+}
+
+.render-section:nth-child(even) .media {
+    order: 1; /* Mettre le média à gauche pour les sections paires */
+}
+
+.freddy-section:nth-child(odd) .content {
+    order: 1; /* Mettre le contenu à gauche pour les sections impaires */
+}
+
+.freddy-section:nth-child(odd) .media {
+    order: 2; /* Mettre le média à droite pour les sections impaires */
+}
+
+.argo-section:nth-child(odd) .content {
+    order: 1; /* Mettre le contenu à gauche pour les sections impaires */
+}
+
+.argo-section:nth-child(odd) .media {
+    order: 2; /* Mettre le média à droite pour les sections impaires */
+}
+.content {
+    flex: 1;
+    padding-right: 20px; /* Espacement à droite */
+}
+
+.media {
+    flex: 1; /* Ajuster la taille de la zone multimédia */
+}
+h2 {
+    margin-bottom: 50px; /* Marge basse */
+}
+
+p {
+    font-size: 2vw; /* Taille de la police en pourcentage de la largeur de la vue */
+    line-height: 1.2; /* Hauteur de ligne */
+    margin-bottom: 50px; /* Marge basse */
+}
+
+button {
+    background-color: var(--button); /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 40px; /* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 25px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur au survol */
+    font-size: 2vw; /* Taille de la police */
+    transition: background-color 0.3s; /* Transition de couleur de fond */
+}
+
+button:hover {
+    background-color: #78290f; /* Couleur de fond au survol */
+}
+
+.media {
+    flex: 1;
+}
+
+img {
+    max-width: 100%; /* Largeur maximale de l'image */
+    height: auto; /* Hauteur automatique proportionnelle */
+}
+
+
+
+/* Style pour l'en-tête */
+header {
+    background-color: #011627; /* Couleur de fond de l'en-tête */
+    padding: 20px; /* Espacement intérieur */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    text-align: center; /* Alignement centré du texte */
+}
 header {
  
     text-align: center;
     padding: 1em 0;
     transition: transform 0.3s ease; /* Ajouter une transition fluide */
-    transform: translateY(-70%); /* Cacher l'en-tête en le déplaçant vers le haut */
+    transform: translateY(-10%); /* Cacher l'en-tête en le déplaçant vers le haut */
     position: fixed; /* Fixer l'en-tête en haut de la fenêtre */
     width: 100%; /* Définir la largeur de l'en-tête sur 100% */
     z-index: 1000; /* Assurez-vous que l'en-tête est au-dessus du contenu */
@@ -46,14 +173,23 @@ header:hover {
 
 @media (max-width: 767px) {
     .mobile-toggle {
+        opacity: 50%;
         display: block; 
         position: fixed; 
         top: 20px; 
-        right: 20px; 
-        z-index: 1100; 
+        right: 5px; 
+        z-index: 1100;
+        width: 6%; /* Réduire la largeur du bouton */
+        height: auto; /* Permettre à la hauteur de s'ajuster automatiquement */
+        max-width: none; /* Annuler toute largeur maximale précédemment définie */
+        max-height: none; /* Annuler toute hauteur maximale précédemment définie */
+        padding: 3px 3px; /* Espacement intérieur */
+        border: none; /* Pas de bordure */
+        border-radius: 500px; /* Coins arrondis */
+        font-size: 2vw; /* Taille de la police */
+        transition: background-color 0.3s; /* Transition de couleur de fond */
     }
 }
-
 
 main {
   
@@ -62,7 +198,7 @@ main {
 }
 
 section {
-    background-color: #e6e6e6;
+    background-color: var(--color-1);;
     color: #FFFFFF;
 }
 
@@ -71,7 +207,7 @@ section {
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
 }
 
